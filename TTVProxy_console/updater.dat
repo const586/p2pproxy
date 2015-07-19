@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<settings>
+  <Settings>
+    <add key="UpdInfoFileURL" value="http://torrent-tv.ru/soft/ts-proxy/upd.xml" />
+    <add key="TempDirectory" value="TEMP|TTVProxy" />
+    <add key="DistrPath" value="TEMP|TTVProxy\distr" />
+    <add key="Pause" value="3" />
+    <add key="UseBackup" value="True" />
+    <add key="StartAfter" value="TTVProxy_win.exe" />
+  </Settings>
+  <Strings>
+    <add key="ErrorUpdate" value="Ошибка обновления" />
+    <add key="UpdateFormTitle" value="Обновление TTVProxy" />
+    <add key="Icon" value="stream.ico" />
+  </Strings>
+</settings>

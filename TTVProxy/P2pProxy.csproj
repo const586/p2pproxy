@@ -1,0 +1,175 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{3D97BCCE-5021-4038-BEAA-56549798FC01}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>P2pProxy</RootNamespace>
+    <AssemblyName>P2pProxy</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>d:\p2pproxy\p2pproxy\bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Test|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\Test\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CryptoLibrary">
+      <HintPath>..\CryptoLibrary.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Net" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="XmlSettings, Version=0.1.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\XmlSettings.0.1.3\lib\net40\XmlSettings.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AceStream31.cs" />
+    <Compile Include="Broadcasting\Broadcaster.cs" />
+    <Compile Include="Broadcasting\BroadcastStream.cs" />
+    <Compile Include="Broadcasting\ChunkedStream.cs" />
+    <Compile Include="Broadcasting\CircularBuffer.cs" />
+    <Compile Include="Broadcasting\CircularStream .cs" />
+    <Compile Include="Broadcasting\Internal\InternalBroadcaster.cs" />
+    <Compile Include="Broadcasting\Simple\BroadcastServer.cs" />
+    <Compile Include="Broadcasting\Simple\BroadcastStreamReader.cs" />
+    <Compile Include="Broadcasting\Simple\HlsClient.cs" />
+    <Compile Include="Broadcasting\Simple\HlsStream.cs" />
+    <Compile Include="Broadcasting\VLC\VlcBroadcaster.cs" />
+    <Compile Include="Broadcasting\VLC\VlcError.cs" />
+    <Compile Include="ContentFilter.cs" />
+    <Compile Include="Extensions\StringExtensions.cs" />
+    <Compile Include="Http\Server\Range.cs" />
+    <Compile Include="SettingManager.cs" />
+    <Compile Include="P2pProxyDevice.cs" />
+    <Compile Include="UPNP\AliasAttribute.cs" />
+    <Compile Include="UPNP\DlnaSource.cs" />
+    <Compile Include="UPNP\SettingManager.cs" />
+    <Compile Include="UPNP\UpnpDevice.cs" />
+    <Compile Include="DataTypes.cs" />
+    <Compile Include="Http\Content\ArchiveContentProvider.cs" />
+    <Compile Include="Http\Content\ChannelContentProvider.cs" />
+    <Compile Include="Http\Content\ContentProvider.cs" />
+    <Compile Include="Http\Content\EpgContentProvider.cs" />
+    <Compile Include="Http\Content\PluginContentProvider.cs" />
+    <Compile Include="Http\Content\RecordContentProvider.cs" />
+    <Compile Include="Http\Server\HttpMime.cs" />
+    <Compile Include="Http\Server\HttpMimeDictionary.cs" />
+    <Compile Include="Http\Server\MyWebRequest.cs" />
+    <Compile Include="Http\Server\MyWebResponse.cs" />
+    <Compile Include="Http\Server\WebServer.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RecordManager.cs" />
+    <Compile Include="Records.cs" />
+    <Compile Include="TorrentStream.cs" />
+    <Compile Include="TSMessage.cs" />
+    <Compile Include="P2pProxy.cs" />
+    <Compile Include="UPNP\ConnectionManagerService.cs" />
+    <Compile Include="UPNP\ContentDirectoryService.cs" />
+    <Compile Include="UPNP\Item.cs" />
+    <Compile Include="UPNP\ItemManager.cs" />
+    <Compile Include="UPNP\MediaReceiverRegistrarService.cs" />
+    <Compile Include="UPNP\SsdpServer.cs" />
+    <Compile Include="UPNP\UpnpServer.cs" />
+    <Compile Include="UPNP\UpnpService.cs" />
+    <Compile Include="UPNP\UpnpServiceArgument.cs" />
+    <Compile Include="UPNP\UpnpSettings.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="pay.html" />
+    <Content Include="logo48.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Include="dlna\Philips.ups">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="dlna\SonyW.ups">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="dlna\UE22F5400.ups">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="pltempl\autom3u.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="pltempl\filepl.ico">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="pltempl\m3u.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="pltempl\urlpl.ico">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\TTVApi\TTVApi.csproj">
+      <Project>{8f0b4be7-057d-4d5f-995c-7db66696c66e}</Project>
+      <Name>TTVApi</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\IPluginProxy\PluginProxy.csproj">
+      <Project>{fd12c708-3180-42e9-9503-e84806ec1ad3}</Project>
+      <Name>PluginProxy</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SimpleLogger\SimpleLogger.csproj">
+      <Project>{e3a56db5-cb6a-42b1-bba7-becd2ba4a879}</Project>
+      <Name>SimpleLogger</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

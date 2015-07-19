@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!--
+  pltempl - верхний тег плейлиста
+  manifest - манифест плейлиста
+  format - формат плейлиста. Будет отображаться в меню.
+  channels - формат для передач
+  archive - формат для архива
+  records - формат для записей
+  header - заголовок плейлиста. 
+  sublist - завершающая плейлист строка
+  lines - формат представления строк плейлиста. Параметры обрамляются фигурными скобками. Доступные значения:
+    * NAME - Имя каналы
+    * GROUPNAME - Имя группы
+    * GROUP - Id группы
+    * HOST - IP:Порт - url-запроса
+    * ID - ID канала
+    * EPG_ID - текущая передача
+    * LOGO - Логотип канала
+    * OBSALUTELOGO - обсолютный URL-логотипов
+    * TIME - Время архива/записи
+
+  Доступные спецсимволы:
+    * &amp; - спецсимвол "&", 
+    * &lt; - спецсимвол "<",
+    * &gt; - спецсимвол ">"
+    
+Пример:
+    <channels>
+      <header>#EXTM3U</header>
+      <lines>#EXTINF:-1, {NAME} ({GROUP_NAME}) ({CHANNEL_LOGO}) ({CURRENT_EPG}) ({SCREEN})
+  http://{HOST}/?cmd=play&amp;file={CHANNEL_ID}&amp;type=channel</lines>
+    </channels>
+    <archive>
+      <header>#EXTM3U</header>
+      <lines>#EXTINF:-1, {NAME} ({SCREEN})
+  http://{HOST}/?cmd=play&amp;file={RECORD_ID}&amp;type=archive</lines>
+    </archive>
+-->
+<pltempl>
+  <manifest>
+    <format>m3u</format>
+  </manifest>
+  <channels>
+    <header>#EXTM3U</header>
+    <lines>#EXTINF:-1, {NAME} ({GROUPNAME})
+http://{HOST}/channels/play?id={ID}</lines>
+    <sublist></sublist>
+    <basement></basement>
+  </channels>
+  <archive>
+    <header>#EXTM3U</header>
+    <lines>#EXTINF:-1, ({CHANNEL}) {NAME}
+http://{HOST}/archive/play?id={RECORD_ID}</lines>
+    <sublist></sublist>
+  </archive>
+  <records>
+    <header>#EXTM3U</header>
+	 <lines>#EXTINF:-1, {NAME}
+http://{HOST}/records/play?id={ID}</lines>
+    <sublist></sublist>
+    <basement></basement>
+  </records>
+  <plugin>
+    <header>EXTM3U</header>
+    <lines>#EXTINF:-1, {TITLE}
+{URL}</lines>
+    <sublist>#EXTINF:-1, {TITLE}
+{URL}&amp;ext=.m3u</sublist>
+    <basement></basement>
+  </plugin>
+</pltempl>

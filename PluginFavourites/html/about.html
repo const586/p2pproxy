@@ -1,0 +1,33 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Favourites</title>
+    <style type="text/css">
+        .auto-style1 {
+            height: 23px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Избранное</h1>    
+    <h2>О плагине</h2>
+    <p>
+        Данный плагин, создан для демонстрации создания программных расширений для приложения &quot;Локальный прокси&quot;. Расширения должны быть написаны на языке из семейства .Net. Для создания плагина необходимо создать проект "Библиотека классов".
+        И реализовать в нем интерфейс IPluginProxy. Что бы плагин был загружен прокси, он должен быть помещен в папку plugins, находящуюся в папке с приложением или в папку ApplicationData: AppData\Romaing\P2pProxy (Windows) или /home/.../.config (*nix).
+    </p>
+    <p>
+    Ниже предоставлены исходные коды необходимых, для реализации, интерфейсов.
+    </p>
+    IPluginProxy
+    <ul>
+        <li><a href="{CONTAINER}">IPluginContainer.cs</a></li>
+        <li><a href="{CONTENT}">IPluginContent.cs</a></li>
+        <li><a href="{PLUGIN}">IPluginProxy.cs</a></li>
+        <li><a href="{DATA}">IRequestData.cs</a></li>
+        <li><a href="{MEDIA_TYPE}">PluginMediaType.cs</a></li>
+        <li><a href="{SOURCE_TYPE}">SourceType.cs</a></li>
+    </ul>
+</body>
+</html>

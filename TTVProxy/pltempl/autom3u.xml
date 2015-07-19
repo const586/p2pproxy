@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!--
+  pltempl - верхний тег плейлиста
+  manifest - манифест плейлиста
+  format - формат плейлиста. Будет отображаться в меню.
+  out - каким образом будет выводиться результат. Доступны варианты: 
+    * File - сохранять в файл. 
+    * Web - выводить в браузере. 
+  ext - Какое какое разрешение будет иметь файл, если в параметре out указан File. 
+  icon - иконка плейлиста в меню программы. Должен лежать в той же папке что и шаблон. 
+        Если несколько видов выдочи результата, то имена файлов иконок указываются через запятую.
+    * None - использовать стандартные иконки. 
+    
+  header - заголовок плейлиста. 
+  lines - формат представления строк плейлиста. Параметры обрамляются фигурными скобками. Доступные значения:
+    * NAME - Имя каналы
+    * GROUP_NAME - Имя группы
+    * GROUP_ID - Id группы
+    * HOST - IP:Порт - url-запроса
+    * CHANNEL_ID - ID канала
+    * CONTENT_TYPE - тип контента
+
+  Доступные спецсимволы:
+    * &amp; - спецсимвол "&", 
+    * &lt; - спецсимвол "<",
+    * &gt; - спецсимвол ">"
+-->
+<pltempl>
+  <manifest>
+    <format>autom3u</format>
+    <out>Web</out>
+    <ext>m3u</ext>
+    <icon>None</icon>
+  </manifest>
+  <channels>
+    <header>#EXTM3U
+#EXTINF:-1,TV
+http://{HOST}/?cmd=playlist&amp;filter=all&amp;type=m3u&amp;ext=.m3u</header>
+    <lines></lines>
+  </channels>
+  <archive>
+    <header>#EXTM3U
+#EXTINF:-1,TV
+http://{HOST}/?cmd=playlist&amp;filter=archive&amp;type=m3u&amp;ext=.m3u</header>
+    <lines></lines>
+  </archive>
+  
+</pltempl>

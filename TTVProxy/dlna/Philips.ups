@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<UpnpConfig xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Version>1</Version>
+  <Name>Sony W-series</Name>
+  <Rtsp>
+    <Info>
+      <MediaFileInfo>
+        <FileExt>m2ts</FileExt>
+        <MimeType>video/mpeg</MimeType>
+        <DlnaType>DLNA.ORG_PN=MPEG_TS_SD_NA_ISO;</DlnaType>
+        <Feature>DLNA.ORG_OP=00;DLNA.ORG_CI=0;DLNA.ORG_FLAGS=01700000000000000000000000000000</Feature>
+        <TranscodingProfile />
+      </MediaFileInfo>
+    </Info>
+    <Resolution>1920x1080</Resolution>
+  </Rtsp>
+  <Live>
+    <SendHead>true</SendHead>
+    <SendContentLength>false</SendContentLength>
+    <Resolution>1920x1080</Resolution>
+    <Info>
+      <MediaFileInfo>
+        <FileExt>m2ts</FileExt>
+        <MimeType>video/mpeg</MimeType>
+        <DlnaType>DLNA.ORG_PN=MPEG_TS_SD_NA_ISO;</DlnaType>
+        <Feature>DLNA.ORG_OP=00;DLNA.ORG_CI=0;DLNA.ORG_FLAGS=01700000000000000000000000000000</Feature>
+        <TranscodingProfile />
+      </MediaFileInfo>
+    </Info>
+  </Live>
+</UpnpConfig>

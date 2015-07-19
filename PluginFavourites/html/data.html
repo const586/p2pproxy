@@ -1,0 +1,43 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>IRequestData.cs</title>
+</head>
+<body>
+    <h1>IRequestData.cs</h1>
+    <div style="border: #000080 1px solid; color: #000; font-family: 'Courier New', Courier, Monospace; font-size: 10pt">
+        <div style="background: #000080; color: #fff; font-family: Verdana, Tahoma, Arial, sans-serif; font-weight: bold; padding: 2px 5px">Code Snippet</div>
+        <div style="background: #ddd; max-height: 300px; overflow: auto">
+            <ol start="1" style="background: #ffffff; margin: 0 0 0 2.5em; padding: 0 0 0 5px;">
+                <li><span style="background:#ffffff;color:#0000ff">using</span><span style="background:#ffffff;color:#000000"> System.Collections.Generic;</span></li>
+                <li style="background: #f3f3f3"><span style="background:#ffffff;color:#0000ff">using</span><span style="background:#ffffff;color:#000000"> System.IO;</span></li>
+                <li>&nbsp;</li>
+                <li style="background: #f3f3f3"><span style="background:#ffffff;color:#0000ff">namespace</span><span style="background:#ffffff;color:#000000"> PluginProxy</span></li>
+                <li><span style="background:#ffffff;color:#000000">{</span></li>
+                <li style="background: #f3f3f3">    <span style="background:#ffffff;color:#000000"></span><span style="background:#ffffff;color:#808080">///</span><span style="background:#ffffff;color:#008000"> </span><span style="background:#ffffff;color:#808080">&lt;summary&gt;</span></li>
+                <li>    <span style="background:#ffffff;color:#000000"></span><span style="background:#ffffff;color:#808080">///</span><span style="background:#ffffff;color:#008000"> Интерфейс описывающий результат IPluginProxy.HttpRequest</span></li>
+                <li style="background: #f3f3f3">    <span style="background:#ffffff;color:#000000"></span><span style="background:#ffffff;color:#808080">///</span><span style="background:#ffffff;color:#008000"> </span><span style="background:#ffffff;color:#808080">&lt;/summary&gt;</span></li>
+                <li>    <span style="background:#ffffff;color:#000000"></span><span style="background:#ffffff;color:#0000ff">public</span><span style="background:#ffffff;color:#000000"> </span><span style="background:#ffffff;color:#0000ff">interface</span><span style="background:#ffffff;color:#000000"> </span><span style="background:#ffffff;color:#2b91af">IRequestData</span></li>
+                <li style="background: #f3f3f3">    <span style="background:#ffffff;color:#000000">{</span></li>
+                <li>        <span style="background:#ffffff;color:#000000"></span><span style="background:#ffffff;color:#808080">///</span><span style="background:#ffffff;color:#008000"> </span><span style="background:#ffffff;color:#808080">&lt;summary&gt;</span></li>
+                <li style="background: #f3f3f3">        <span style="background:#ffffff;color:#000000"></span><span style="background:#ffffff;color:#808080">///</span><span style="background:#ffffff;color:#008000"> HTTP-заголовки</span></li>
+                <li>        <span style="background:#ffffff;color:#000000"></span><span style="background:#ffffff;color:#808080">///</span><span style="background:#ffffff;color:#008000"> </span><span style="background:#ffffff;color:#808080">&lt;/summary&gt;</span></li>
+                <li style="background: #f3f3f3">        <span style="background:#ffffff;color:#000000"></span><span style="background:#ffffff;color:#2b91af">Dictionary</span><span style="background:#ffffff;color:#000000">&lt;</span><span style="background:#ffffff;color:#0000ff">string</span><span style="background:#ffffff;color:#000000">, </span><span style="background:#ffffff;color:#0000ff">string</span><span style="background:#ffffff;color:#000000">&gt; Headers { </span><span style="background:#ffffff;color:#0000ff">get</span><span style="background:#ffffff;color:#000000">; }</span></li>
+                <li>        <span style="background:#ffffff;color:#000000"></span><span style="background:#ffffff;color:#808080">///</span><span style="background:#ffffff;color:#008000"> </span><span style="background:#ffffff;color:#808080">&lt;summary&gt;</span></li>
+                <li style="background: #f3f3f3">        <span style="background:#ffffff;color:#000000"></span><span style="background:#ffffff;color:#808080">///</span><span style="background:#ffffff;color:#008000"> Метод возвращающий данные результата</span></li>
+                <li>        <span style="background:#ffffff;color:#000000"></span><span style="background:#ffffff;color:#808080">///</span><span style="background:#ffffff;color:#008000"> </span><span style="background:#ffffff;color:#808080">&lt;/summary&gt;</span></li>
+                <li style="background: #f3f3f3">        <span style="background:#ffffff;color:#000000"></span><span style="background:#ffffff;color:#808080">///</span><span style="background:#ffffff;color:#008000"> </span><span style="background:#ffffff;color:#808080">&lt;returns&gt;Поток</span><span style="background:#ffffff;color:#008000"> данных</span><span style="background:#ffffff;color:#808080">&lt;/returns&gt;</span></li>
+                <li>        <span style="background:#ffffff;color:#000000"></span><span style="background:#ffffff;color:#2b91af">Stream</span><span style="background:#ffffff;color:#000000"> GetStream();</span></li>
+                <li style="background: #f3f3f3">        <span style="background:#ffffff;color:#000000"></span><span style="background:#ffffff;color:#808080">///</span><span style="background:#ffffff;color:#008000"> </span><span style="background:#ffffff;color:#808080">&lt;summary&gt;</span></li>
+                <li>        <span style="background:#ffffff;color:#000000"></span><span style="background:#ffffff;color:#808080">///</span><span style="background:#ffffff;color:#008000"> Код результата запроса. Например (200 ОК)</span></li>
+                <li style="background: #f3f3f3">        <span style="background:#ffffff;color:#000000"></span><span style="background:#ffffff;color:#808080">///</span><span style="background:#ffffff;color:#008000"> </span><span style="background:#ffffff;color:#808080">&lt;/summary&gt;</span></li>
+                <li>        <span style="background:#ffffff;color:#000000"></span><span style="background:#ffffff;color:#0000ff">ushort</span><span style="background:#ffffff;color:#000000"> ResultState { </span><span style="background:#ffffff;color:#0000ff">get</span><span style="background:#ffffff;color:#000000">; }</span></li>
+                <li style="background: #f3f3f3">    <span style="background:#ffffff;color:#000000">}</span></li>
+                <li><span style="background:#ffffff;color:#000000">}</span></li>
+            </ol>
+        </div>
+    </div>
+</body>
+</html>

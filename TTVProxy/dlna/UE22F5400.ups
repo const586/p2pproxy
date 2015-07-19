@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<UpnpConfig xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Version>1</Version>
+  <Name>Samsung UE22F5400</Name>
+  <VoD>
+    <Info>
+      <MediaFileInfo>
+        <FileExt>ts</FileExt>
+        <DlnaType>DLNA.ORG_PN=AVC_TS_MP_SD_AAC_MULT5_ISO;</DlnaType>
+        <Feature>DLNA.ORG_OP=01;DLNA.ORG_CI=0;DLNA.ORG_PS=1;DLNA.ORG_FLAGS=8D100000000000000000000000000000</Feature>
+        <TranscodingProfile />
+      </MediaFileInfo>
+    </Info>
+  </VoD>
+  <Live>
+    <SendHead>true</SendHead>
+    <SendContentLength>true</SendContentLength>
+    <Resolution>640x480</Resolution>
+    <Info>
+      <MediaFileInfo>
+        <FileExt>m2ts</FileExt>
+        <DlnaType>DLNA.ORG_PN=AVC_TS_MP_SD_AAC_MULT5_ISO;</DlnaType>
+        <Feature>DLNA.ORG_OP=00;DLNA.ORG_CI=0;DLNA.ORG_FLAGS=8D500000000000000000000000000000</Feature>
+        <TranscodingProfile />
+      </MediaFileInfo>
+    </Info>
+  </Live>
+</UpnpConfig>

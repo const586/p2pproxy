@@ -1,0 +1,108 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{75DCFE2F-5C46-4E1B-B1A6-A57DC08090C5}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>PluginFavourites</RootNamespace>
+    <AssemblyName>PluginFavourites</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>d:\p2pproxy\plugins\favourites\bin\Debug\plugins\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="XmlSettings">
+      <HintPath>..\packages\XmlSettings.0.1.3\lib\net40\XmlSettings.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AboutRequestData.cs" />
+    <Compile Include="Auth.cs" />
+    <Compile Include="Category.cs" />
+    <Compile Include="Channel.cs" />
+    <Compile Include="Class1.cs" />
+    <Compile Include="Epg.cs" />
+    <Compile Include="EpgContentProvider.cs" />
+    <Compile Include="ErrorType.cs" />
+    <Compile Include="FavouriteContentProvider.cs" />
+    <Compile Include="FormSettings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSettings.Designer.cs">
+      <DependentUpon>FormSettings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Helper.cs" />
+    <Compile Include="Item.cs" />
+    <Compile Include="LocalFileContentProvider.cs" />
+    <Compile Include="Playlist.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="StateApi.cs" />
+    <Compile Include="TorrentContentProvider.cs" />
+    <Compile Include="YoutubeContentProvider.cs" />
+    <Compile Include="YouTubeVideoQuality.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\IPluginProxy\PluginProxy.csproj">
+      <Project>{fd12c708-3180-42e9-9503-e84806ec1ad3}</Project>
+      <Name>PluginProxy</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="FormSettings.resx">
+      <DependentUpon>FormSettings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="html\about.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="html\container.html" />
+    <EmbeddedResource Include="html\content.html" />
+    <EmbeddedResource Include="html\data.html" />
+    <EmbeddedResource Include="html\media.html" />
+    <EmbeddedResource Include="html\source.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="html\plugin.html" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

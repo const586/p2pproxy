@@ -1,0 +1,324 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Authorization" xml:space="preserve">
+    <value>Авторизация</value>
+  </data>
+  <data name="ErrorRequest" xml:space="preserve">
+    <value>Неверный формат запроса</value>
+  </data>
+  <data name="ErrorResponse" xml:space="preserve">
+    <value>Неверный формат результата</value>
+  </data>
+  <data name="Exit" xml:space="preserve">
+    <value>Выход</value>
+  </data>
+  <data name="incorrect" xml:space="preserve">
+    <value>Неверный логин/пароль</value>
+  </data>
+  <data name="Login" xml:space="preserve">
+    <value>Логин</value>
+  </data>
+  <data name="noconnect" xml:space="preserve">
+    <value>Сервер не отвечает</value>
+  </data>
+  <data name="novip" xml:space="preserve">
+    <value>Нет ВИП статуса</value>
+  </data>
+  <data name="OK" xml:space="preserve">
+    <value>Применить</value>
+  </data>
+  <data name="Option" xml:space="preserve">
+    <value>Параметры</value>
+  </data>
+  <data name="Password" xml:space="preserve">
+    <value>Пароль</value>
+  </data>
+  <data name="TitleNotify" xml:space="preserve">
+    <value>Torrent-TV Proxy</value>
+  </data>
+  <data name="ErrorAuth" xml:space="preserve">
+    <value>Ошибка авторизации</value>
+  </data>
+  <data name="SuccessAuth" xml:space="preserve">
+    <value>Авторизация успешна</value>
+  </data>
+  <data name="UpdateFormTitle" xml:space="preserve">
+    <value>Обновление Torrent-TV.RU Proxy</value>
+  </data>
+  <data name="Feedback" xml:space="preserve">
+    <value>Обратная связь</value>
+  </data>
+  <data name="HTTPPort" xml:space="preserve">
+    <value>HTTP Порт</value>
+  </data>
+  <data name="Message" xml:space="preserve">
+    <value>Сообщение</value>
+  </data>
+  <data name="Send" xml:space="preserve">
+    <value>Отправить</value>
+  </data>
+  <data name="SendError" xml:space="preserve">
+    <value>Ошибка</value>
+  </data>
+  <data name="SendToDeveloper" xml:space="preserve">
+    <value>Сообщить разработчику</value>
+  </data>
+  <data name="SendWishes" xml:space="preserve">
+    <value>Пожелания</value>
+  </data>
+  <data name="TitleMessage" xml:space="preserve">
+    <value>Заголовок</value>
+  </data>
+  <data name="ExceptionSend" xml:space="preserve">
+    <value>Ошибка отправки сообщения. Попробуйте позже.</value>
+  </data>
+  <data name="SystemSettings" xml:space="preserve">
+    <value>Системные</value>
+  </data>
+  <data name="DialogAllFiles" xml:space="preserve">
+    <value>Все файлы (*.*)</value>
+  </data>
+  <data name="DialogFormat" xml:space="preserve">
+    <value>плейлист</value>
+  </data>
+  <data name="ErrorUpdate" xml:space="preserve">
+    <value>Ошибка обновления программы. Установите обновление в ручную.</value>
+  </data>
+  <data name="OpenPlaylist" xml:space="preserve">
+    <value>Открыть плэйлист</value>
+  </data>
+  <data name="ChannelPlaylist" xml:space="preserve">
+    <value>Каналы</value>
+  </data>
+  <data name="SaveAsPlayList" xml:space="preserve">
+    <value>Сохранить плэйлист в файл</value>
+  </data>
+  <data name="WebCmdPlay.TsPlay" xml:space="preserve">
+    <value>Загрузка торрента</value>
+  </data>
+  <data name="ErrorTSNotInstalled" xml:space="preserve">
+    <value>TorrentStream не установлен</value>
+  </data>
+  <data name="RecordsMeneger" xml:space="preserve">
+    <value>ТВ-Записи</value>
+  </data>
+  <data name="UseStreamTimeOut" xml:space="preserve">
+    <value>Вкл. поддержку SmartTV</value>
+  </data>
+  <data name="AddRecord" xml:space="preserve">
+    <value>Добавить задание</value>
+  </data>
+  <data name="AppUpdater" xml:space="preserve">
+    <value>Обновление программы</value>
+  </data>
+  <data name="ColStatus" xml:space="preserve">
+    <value>Статус задачи</value>
+  </data>
+  <data name="DelRecord" xml:space="preserve">
+    <value>Удалить задание</value>
+  </data>
+  <data name="ErrorData" xml:space="preserve">
+    <value>Неверные данные</value>
+  </data>
+  <data name="OffRecord" xml:space="preserve">
+    <value>Выкл. задание</value>
+  </data>
+  <data name="OnRecord" xml:space="preserve">
+    <value>Вкл. задание</value>
+  </data>
+  <data name="PauseRecord" xml:space="preserve">
+    <value>Приост. запись</value>
+  </data>
+  <data name="RecordEndTime" xml:space="preserve">
+    <value>Конец записи</value>
+  </data>
+  <data name="RecordName" xml:space="preserve">
+    <value>Имя задачи</value>
+  </data>
+  <data name="Records" xml:space="preserve">
+    <value>Записи ТВ</value>
+  </data>
+  <data name="RecordStartTime" xml:space="preserve">
+    <value>Начало записи</value>
+  </data>
+  <data name="StartRecord" xml:space="preserve">
+    <value>Начать запись</value>
+  </data>
+  <data name="StopRecord" xml:space="preserve">
+    <value>Остан. запись</value>
+  </data>
+  <data name="UnknownError" xml:space="preserve">
+    <value>Неизвестная ошибка</value>
+  </data>
+  <data name="AceStreamNotFound" xml:space="preserve">
+    <value>AceStream не найден. Работа не возможна.</value>
+  </data>
+  <data name="GetVip" xml:space="preserve">
+    <value>Купить/Продлить VIP</value>
+  </data>
+  <data name="SaveAsAutoPlayList" xml:space="preserve">
+    <value>Сохранить как авто-плейлист</value>
+  </data>
+  <data name="TimeOutTS" xml:space="preserve">
+    <value>Таймаут Потока</value>
+  </data>
+  <data name="FileNotFound" xml:space="preserve">
+    <value>Трансляция не найдена</value>
+  </data>
+  <data name="AceStreamNotInstalled" xml:space="preserve">
+    <value>AceStream не установлен</value>
+  </data>
+  <data name="RecordPath" xml:space="preserve">
+    <value>Папка записи</value>
+  </data>
+  <data name="noparam" xml:space="preserve">
+    <value>Неверные параметры запроса</value>
+  </data>
+  <data name="ArchivePlaylist" xml:space="preserve">
+    <value>Архив</value>
+  </data>
+  <data name="AboutProgramm" xml:space="preserve">
+    <value>О программе</value>
+  </data>
+  <data name="ext_vlc" xml:space="preserve">
+    <value>Внешний VLC плеер</value>
+  </data>
+  <data name="VlcConnectError" xml:space="preserve">
+    <value>Не удалось подключиться или запустить VLC сервер. Дальнейшая работа приложения не возможна.</value>
+  </data>
+  <data name="vlc_cache" xml:space="preserve">
+    <value>Кэш VLC</value>
+  </data>
+  <data name="vlc_port" xml:space="preserve">
+    <value>Порт VLC</value>
+  </data>
+  <data name="vlc_start_cache" xml:space="preserve">
+    <value>Стартовый кэш</value>
+  </data>
+  <data name="enable_dlna" xml:space="preserve">
+    <value>Включить DLNA</value>
+  </data>
+  <data name="as_timeout" xml:space="preserve">
+    <value>Таймаут трансляции (с.)</value>
+  </data>
+  <data name="rtspport" xml:space="preserve">
+    <value>Порт RTSP</value>
+  </data>
+</root>
